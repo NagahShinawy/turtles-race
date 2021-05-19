@@ -5,7 +5,7 @@ import random
 from typing import List
 from turtle import Turtle, Screen
 from data import turtles_data
-from constants import WIN, LOSE, SCREEN_TITLE, SCREEN_PROMPT
+from constants import WIN, LOSE, SCREEN_TITLE, SCREEN_PROMPT, RACE, BLACK, SCREEN_WIDTH, SCREEN_HEIGHT
 
 
 class Race:
@@ -51,7 +51,9 @@ def start():
 
     # ########## setup screen #############
     screen = Screen()
-    screen.setup(width=500, height=400)
+    screen.setup(width=SCREEN_WIDTH, height=SCREEN_HEIGHT)
+    screen.bgcolor(BLACK)
+    screen.title(RACE)
     user_bet = screen.textinput(
         title=SCREEN_TITLE, prompt=SCREEN_PROMPT
     )
