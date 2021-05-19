@@ -22,7 +22,7 @@ class Race:
         while True:
             for competitor in self.competitors:
                 self.harryup(competitor)
-                if self.is_race_finished(competitor):
+                if self.is_win(competitor):
                     self.winner = competitor
                     return self.winner
 
@@ -46,5 +46,5 @@ class Race:
         self.competitors_moves[competitor.pencolor()] += move
 
     @staticmethod
-    def is_race_finished(competitor):
+    def is_win(competitor):
         return competitor.xcor() >= Race.STOP
