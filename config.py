@@ -15,7 +15,7 @@ class SetUpTurtles:
             self.add_competitor(competitor)
         return self.competitors
 
-    def add_competitor(self, competitor):
+    def add_competitor(self, competitor: dict):
         comp = Turtle(shape=competitor["shape"])
         comp.penup()
         comp.color(competitor["color"])
